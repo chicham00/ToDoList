@@ -1,7 +1,5 @@
 package com.chise.ToDoList;
 
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -23,17 +21,23 @@ public class ToDoController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	public String todo(Locale locale, Model model) {
 
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-		String formattedDate = dateFormat.format(date);
-
-		model.addAttribute("serverTime", formattedDate );
+//初期表示画面の処理
 
 		return "todo";
 	}
+	@RequestMapping(value = "/create", method = RequestMethod.GET)
+	public String create(Locale locale, Model model) {
+//新規追加画面のこと
 
+		return "create";
+	}
+
+	@RequestMapping(value = "/edit", method = RequestMethod.GET)
+	public String edit(Locale locale, Model model) {
+//新規追加画面のこと
+
+		return "edit";
+	}
 }

@@ -11,10 +11,11 @@
 	<P>The time on the server is ${serverTime}.</P>
 
 	<a href="${pageContext.request.contextPath}/create">新規追加</a>
-	<a href="${pageContext.request.contextPath}/edit/id">編集</a>
+	<a href="${pageContext.request.contextPath}/edit">編集</a>
 	<p>ほげほげ<a href="${pageContext.request.contextPath}/delete/id">削除</a></p>
 	<p>ほげほげ<a href="${pageContext.request.contextPath}/delete/id">削除</a></p>
 	<p>ほげほげ<a href="${pageContext.request.contextPath}/delete/id">削除</a></p>
+
 
 
 
