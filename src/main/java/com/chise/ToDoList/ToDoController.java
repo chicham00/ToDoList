@@ -40,4 +40,10 @@ public class ToDoController {
 
 		return "edit";
 	}
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	public String delete(Locale locale, Model model) {
+//削除のこと
+
+		return "todo";
+	}
 }
