@@ -8,35 +8,32 @@
 </head>
 <body>
 	<h1>ToDoList</h1>
-	<a href="${pageContext.request.contextPath}">登録</a>
-	<a href="${pageContext.request.contextPath}">戻る</a>
-
-
-	<form action="${pageContext.request.contextPath}/" method="post">
-		<table class="table">
-			<tr>
-				<td></td>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="text"></td>
-			</tr>
-		</table>
-		<input type="submit" value="登録">
-
+	<a href="${pageContext.request.contextPath}/todo/">戻る</a>
+	<h3>タスク新規入力画面</h3>
+	<table>
+		<tr>
+			<td>1</td>
+			<td><input type="text" name="task"></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><input type="text" name="task"></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><input type="text" name="task"></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td><input type="text" name="task"></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td><input type="text" name="task"></td>
+		</tr>
+	</table>
+	<form action="${pageContext.request.contextPath}/todo/create" method="post">
+		<input type="submit" name="create" value="登録">
 	</form>
 </body>
 </html>

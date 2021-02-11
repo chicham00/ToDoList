@@ -10,15 +10,66 @@
 	<h1>ToDoList</h1>
 
 	<P>The time on the server is ${serverTime}.</P>
+	<a href="${pageContext.request.contextPath}/todo/create">新規追加</a>
 
 
-	<form action="${pageContext.request.contextPath}/" method="post">
-		<a href="${pageContext.request.contextPath}/create">新規追加</a>
-		<a href="${pageContext.request.contextPath}/edit">編集</a>
-		<p>ほげほげ<a href="${pageContext.request.contextPath}/delete/">削除</a></p>
-		<p>ほげほげ<a href="${pageContext.request.contextPath}/delete/">削除</a></p>
-		<p>ほげほげ<a href="${pageContext.request.contextPath}/delete/">削除</a></p>
-	</form>
+	<table>
+		<tr>
+			<td>1</td>
+			<td>ほげ</td>
+			<td><a href="${pageContext.request.contextPath}/todo/1/edit">編集</a></td>
+			<td>
+				<form action="${pageContext.request.contextPath}/todo/1/delete"
+					method="post">
+					<input type="submit" name="task" value="削除">
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>ほげ</td>
+			<td><a href="${pageContext.request.contextPath}/todo/1/edit">編集</a></td>
+			<td>
+				<form action="${pageContext.request.contextPath}/todo/1/delete"
+					method="post">
+					<input type="submit" name="task" value="削除">
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>ほげ</td>
+			<td><a href="${pageContext.request.contextPath}/todo/1/edit">編集</a></td>
+			<td>
+				<form action="${pageContext.request.contextPath}/todo/1/delete"
+					method="post">
+					<input type="submit" name="task1" value="削除">
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>ほげほげ</td>
+			<td><a href="${pageContext.request.contextPath}/todo/1/edit">編集</a></td>
+			<td>
+				<form action="${pageContext.request.contextPath}/todo/1/delete"
+					method="post">
+					<input type="submit" name="task1" value="削除">
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>ほげ</td>
+			<td><a href="${pageContext.request.contextPath}/todo/1/edit">編集</a></td>
+			<td>
+				<form action="${pageContext.request.contextPath}/todo/1/delete"
+					method="post">
+					<input type="submit" name="task1" value="削除">
+				</form>
+			</td>
+		</tr>
+	</table>
 
 </body>
 </html>

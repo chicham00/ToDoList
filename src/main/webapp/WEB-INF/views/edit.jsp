@@ -8,34 +8,17 @@
 </head>
 <body>
 	<h1>ToDoList</h1>
-	<form action="${pageContext.request.contextPath}" method="post">
-	<a href="${pageContext.request.contextPath}">登録</a>
-	<a href="${pageContext.request.contextPath}">戻る</a>
-		<table>
-			<tr>
-				<td></td>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="text"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="text"></td>
-			</tr>
-		</table>
-		<input type="submit" value="登録">
+	<h3>編集画面</h3>
 
-	</form>
-
+	<input type="text" name="task">
+	<div>
+		<form action="${pageContext.request.contextPath}/todo/1/edit"
+			method="post">
+			<input type="submit" name="edit" value="登録">
+		</form>
+	</div>
+	<div>
+		<a href="${pageContext.request.contextPath}/todo">戻る</a>
+	</div>
 </body>
 </html>
