@@ -13,7 +13,7 @@
 
 	<form action="${pageContext.request.contextPath}/todo/create"method="post">
 		<input type="text" name="name">
-		<button type="submit" name="create" value="登録">登録</button>
+		<button type="submit">登録</button>
 	</form>
 </body>
 </html>

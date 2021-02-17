@@ -10,17 +10,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chise.ToDoList.entity.Task;
-import com.chise.ToDoList.form.TaskCreateForm;
 
 @Controller
 public class ToDoController {
@@ -76,7 +73,7 @@ public class ToDoController {
 	 * @return
 	 */
 	@RequestMapping(value = "/todo/create", method = RequestMethod.POST)
-	public String store(Locale locale, Model model, PreparedStatementSetter name) {
+	public String store(Locale locale, Model model, @RequestParam("name") String name) {
 		// SQL文を設定する
 		String sql = "INSERT INTO task (name) VALUES (?)";
 
@@ -114,7 +111,7 @@ public class ToDoController {
 	}
 
 	/**
-	 *タスク編集処理
+	 *タスク編集更新処理
 	 * @param locale
 	 * @param model
 	 * @param id
