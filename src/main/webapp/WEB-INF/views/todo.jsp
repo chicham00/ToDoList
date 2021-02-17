@@ -9,67 +9,20 @@
 <body>
 	<h1>ToDoList</h1>
 
-	<P>The time on the server is ${serverTime}.</P>
+
+	<h2>タスク一覧</h2>
 	<a href="${pageContext.request.contextPath}/todo/create">新規追加</a>
-
-
-	<table>
-		<tr>
-			<td>1</td>
-			<td>ほげ</td>
-			<td><a href="${pageContext.request.contextPath}/todo/1/edit">編集</a></td>
-			<td>
-				<form action="${pageContext.request.contextPath}/todo/1/delete"
+	<ul>
+		<c:forEach var="task" items="${tasks}">
+			<li><div class="col-sm">${task.getName()}</div>
+			<a
+				href="${pageContext.request.contextPath}/todo/${task.getId()}/edit">編集</a>
+				<form
+					action="${pageContext.request.contextPath}/todo/${task.getId()}/delete"
 					method="post">
 					<input type="submit" name="task" value="削除">
-				</form>
-			</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>ほげ</td>
-			<td><a href="${pageContext.request.contextPath}/todo/1/edit">編集</a></td>
-			<td>
-				<form action="${pageContext.request.contextPath}/todo/1/delete"
-					method="post">
-					<input type="submit" name="task" value="削除">
-				</form>
-			</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>ほげ</td>
-			<td><a href="${pageContext.request.contextPath}/todo/1/edit">編集</a></td>
-			<td>
-				<form action="${pageContext.request.contextPath}/todo/1/delete"
-					method="post">
-					<input type="submit" name="task1" value="削除">
-				</form>
-			</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>ほげほげ</td>
-			<td><a href="${pageContext.request.contextPath}/todo/1/edit">編集</a></td>
-			<td>
-				<form action="${pageContext.request.contextPath}/todo/1/delete"
-					method="post">
-					<input type="submit" name="task1" value="削除">
-				</form>
-			</td>
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>ほげ</td>
-			<td><a href="${pageContext.request.contextPath}/todo/1/edit">編集</a></td>
-			<td>
-				<form action="${pageContext.request.contextPath}/todo/1/delete"
-					method="post">
-					<input type="submit" name="task1" value="削除">
-				</form>
-			</td>
-		</tr>
-	</table>
-
+				</form></li>
+		</c:forEach>
+	</ul>
 </body>
 </html>
