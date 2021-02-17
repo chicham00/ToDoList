@@ -9,7 +9,6 @@
 <body>
 	<h1>ToDoList</h1>
 
-
 	<h2>タスク一覧</h2>
 	<a href="${pageContext.request.contextPath}/todo/create">新規追加</a>
 	<ul>
