@@ -35,7 +35,7 @@ public class ToDoController {
 	@RequestMapping(value = "/todo", method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
 		// SQL文を設定する
-		String sql = "select * from task";
+		String sql = "select * from task order by id";
 		// データを取得する
 		List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);
 
